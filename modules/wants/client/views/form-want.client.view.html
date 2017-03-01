@@ -1,0 +1,32 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.want._id ? 'Edit Want' : 'New Want'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.wantForm" class="form-horizontal" ng-submit="vm.save(vm.form.wantForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="iq">IQ</label>
+          <input name="iq" type="text" ng-model="vm.want.iq" id="iq" class="form-control" placeholder="IQ" required>
+           <label class="control-label" for="eq">EQ</label>
+          <input name="eq" type="text" ng-model="vm.want.eq" id="eq" class="form-control" placeholder="EQ" required>
+           <label class="control-label" for="eyeColor">Eye Color</label>
+          <input name="eyeColor" type="text" ng-model="vm.want.eyeColor" id="eyeColor" class="form-control" placeholder="Eye Color" required>
+          <label class="control-label" for="disc">D.I.S.C</label>
+          <input name="disc" type="text" ng-model="vm.want.disc" id="disc" class="form-control" placeholder="D.I.S.C." required>
+          <label class="control-label" for="interest">Interests</label>
+          <input name="interest" type="text" ng-model="vm.want.interest" id="interest" class="form-control" placeholder="Interests" required>
+          <div ng-messages="vm.form.wantForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Want name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.want._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

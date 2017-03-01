@@ -1,0 +1,25 @@
+<section>
+  <div class="page-header">
+    <h1>Profiles</h1>
+
+  </div>
+  <div class="list-group">
+  
+    <a ng-repeat="want in vm.wants"
+       ng-if="vm.user._id == want.user._id"
+       ui-sref="wants.view({ wantId: want._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="want.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="want.user" ng-bind="want.user.displayName"></span>
+        <span ng-if="!want.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="want.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.wants.$resolved && !vm.wants.length">
+    No Wants yet, why don't you <a ui-sref="wants.create">create one</a>?
+  </div>
+</section>

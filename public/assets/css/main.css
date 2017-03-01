@@ -1,0 +1,33 @@
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 14px;
+  line-height: 1.42857143;  
+  color: white;
+  /*color: #333;*/
+  
+  background-image: url("/modules/core/client/img/brand/couple1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*filter: brightness(50%);*/
+
+}
+footer {
+  /*background-image: url("/modules/core/client/img/brand/couple1.jpg");*/
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 75px;
+  }
+
+.footer-links a {
+	color: white;
+}
+
+#fb-button{font-family: "Helvetica Neue", Helvetica, Arial !important}
+#pair{
+	font-family: "Helvetica Neue", Helvetica, Arial !important;
+	font-size: 100px;
+	color: #d9534f;
+}
